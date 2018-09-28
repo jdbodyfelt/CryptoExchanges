@@ -1,6 +1,4 @@
-import pandas as pd
-#/*------------------------------------------------------------------------------------/*#
-DEX_dict = {
+DEX = {
     'AmadeusRelay'    : [ '0x0e8BA001a821F3CE0734763D008C9d7c957F5852' ],
     'BambooRelay'     : [ '0x5dd835a893734b8d556eccf87800b76dda5aedc5' ],
     'Bibox'           : [ '0xf73c3c65bde10bf26c2e1763104e609a41702efe' ], 
@@ -81,11 +79,3 @@ DEX_dict = {
     'Yunbi'           : [ '0xd94c9ff168dc6aebf9b6cc86deff54f3fb0afc33',
                           '0x42da8a05cb7ed9a43572b5ba1b8f82a0a6e263dc',
                           '0x700f6912e5753e91ea3fae877a2374a2db1245d7' ] }
-#/*------------------------------------------------------------------------------------/*#
-DEX = [item for sublist in DEX_dict.values() for item in sublist]
-
-def remove_DEXs(xy: pd.DataFrame) -> pd.DataFrame:
-    for j, D in enumerate(DEX): xy = xy[q.address != D]
-    return xy
-#/*------------------------------------------------------------------------------------/*#
-    
